@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Tab Organizer handles data.">
+  <title>Tab Organizer Privacy Policy · Tab Organizer</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="masthead"><a class="wordmark" href="../">Tab Organizer</a><span>Chrome extension</span></div>
+    <nav aria-label="Primary navigation"><a href="../">Home</a><a aria-current="page" href="../privacy/">Privacy</a><a href="../terms/">Terms</a></nav>
+  </header>
+  <main id="main-content"><h1>Tab Organizer Privacy Policy</h1>
+
+<p>Last updated: September 27, 2026</p>
+
+<p>Tab Organizer is a Chrome extension for organizing browser tabs, maintained by Julia. This policy explains how the extension accesses, uses, stores, and transmits data, including through optional Google sign-in, cloud sync, and AI sorting.</p>
+
+<p>For questions or data deletion requests, contact <a href="mailto:juliachen.designwork@gmail.com">juliachen.designwork@gmail.com</a>.</p>
+
+<h2>1. Organizing tabs on your device</h2>
+
+<p>Tab Organizer reads the titles, URLs, and window information of currently open tabs so it can display them and let you choose what to save. It does not read your full Chrome browsing history.</p>
+
+<p>Your saved links, notes, workspaces, collections, ordering, and related settings are stored locally in your current Chrome profile by default. Only content you choose to save or import is added to your workspace.</p>
+
+<p>Saved records also include creation, modification, and deletion timestamps; the most recent time you opened a saved link through the extension; link check results; and website icon URLs. These records support the organizing features and are not used for advertising tracking.</p>
+
+<p>When you choose to import Chrome bookmarks, the extension reads your bookmark tree so you can select folders to import. It does not modify or delete your original Chrome bookmarks.</p>
+
+<h2>2. Google sign-in and cloud sync</h2>
+
+<p>You can organize tabs locally without an account. If you choose to sign in with Google, Tab Organizer uses Supabase&#39;s authentication service to create or identify your sync account and maintain your signed-in session.</p>
+
+<p>The current sign-in flow requests email and basic profile permissions, so Google&#39;s consent screen includes your name and profile picture. After authorization, the authentication service can receive this basic information and your account identifier. Tab Organizer does not currently display your name or picture, and does not use this information for advertising or marketing analysis.</p>
+
+<p>This authorization does not give Tab Organizer access to your Google password, Gmail messages, Google Drive files, or contacts. Google sign-in information is not automatically included in AI sorting requests.</p>
+
+<p>After you sign in, workspace data is sent to Supabase to sync across devices. This includes workspace and collection names, collection descriptions, link titles and full URLs, text notes, icon URLs, starred status, ordering, timestamps, link check results, and deletion markers. Your first sync also includes workspace data saved locally before you signed in.</p>
+
+<p>Your sign-in session is stored on your device to keep you signed in. Appearance and some display preferences stay local. AI API keys are not included in cloud workspace sync.</p>
+
+<h2>3. Optional AI sorting</h2>
+
+<p>AI sorting uses your own provider account and API key. Depending on your installed version, supported providers may include Anthropic (Claude), OpenAI, or Google (Gemini).</p>
+
+<p>Requests go directly from your browser to your chosen AI provider, without passing through Tab Organizer&#39;s servers. The maintainer does not receive your API key, sorting requests, or provider responses through this AI request flow. If you separately enable cloud sync, your workspace content still syncs as described in section 2; cloud sync and AI requests are separate features.</p>
+
+<p>Once you configure a valid API key, selecting open tabs may trigger a request for sorting suggestions before you click AI sort. The request includes:</p>
+
+<ul>
+  <li>The titles and full URLs of the selected tabs.</li>
+  <li>Names in your existing category structure, including organizations, spaces, and collections, along with identifiers used to match suggestions to collections. This helps the AI suggest where each tab belongs.</li>
+</ul>
+
+<p>Sorting requests do not include webpage contents or workspace notes. URLs and category names may themselves contain personal or confidential information, so consider their contents before using this feature.</p>
+
+<p>Your API key is stored on your device and sent to your chosen provider to authenticate requests. It is not synced to Tab Organizer&#39;s cloud database or included in JSON backups. Clearing the API key in settings stops future AI sorting requests, but does not retract data already sent.</p>
+
+<p>Your AI provider&#39;s retention and processing of request data depend on your provider account, settings, and applicable terms. Tab Organizer does not itself use this data to train AI models.</p>
+
+<h2>4. Website icons, link checks, and feedback</h2>
+
+<p><strong>Website icons.</strong> To display icons for saved links, the extension requests images from Google&#39;s website icon service. Each request includes the link&#39;s domain name, but not the original URL&#39;s path or query parameters. The icon provider also receives ordinary connection information, such as your IP address.</p>
+
+<p><strong>Link checks.</strong> When you start a link check and grant site access, the extension connects to the URLs being checked. It checks server response statuses and may make a regular page request when necessary. It does not use the response body for classification or save it as workspace content. The destination website receives the full requested URL and ordinary connection information.</p>
+
+<p><strong>Feedback.</strong> Opening Send feedback takes you to a Tally form, with the extension version and your browser&#39;s language setting included in the URL. If you submit the form, Tally and the maintainer receive your submitted content. If you email support, the maintainer and email service providers process your message and contact information.</p>
+
+<p>Service providers may keep authentication, error, security, and operational logs, such as request times, IP addresses, and response statuses, to operate and protect their services.</p>
+
+<h2>5. How data is used and who receives it</h2>
+
+<p>Data is used to provide tab organization, account authentication, sync, optional sorting suggestions, link checks, and user support.</p>
+
+<p>Depending on the features you use, data is sent to the relevant services described above: Google, Supabase, your chosen AI provider, Tally, email service providers, and websites you ask to check. We do not sell personal data or use Google sign-in information or workspace content for advertising, data resale, or credit assessments.</p>
+
+<p>Tab Organizer&#39;s use and transfer of Google user data will comply with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including applicable Limited Use requirements.</p>
+
+<p>Where necessary, we may access or disclose relevant data to handle your support or deletion request, investigate security issues, or meet legal obligations, limited to what is needed for that purpose.</p>
+
+<h2>6. Storage, security, and retention</h2>
+
+<p>Local data is stored in your Chrome profile. Optional cloud data is stored by Supabase. Account-level access rules restrict ordinary users from accessing another account&#39;s synced workspace. This is not end-to-end encryption and does not mean service administrators can never access the data.</p>
+
+<p>Local data remains until you remove it, clear the relevant browser storage, or uninstall the extension. Cloud accounts and synced data are retained to provide sync until you request deletion or retention is no longer needed. Deleting an item in the interface uses a deletion marker so other devices can sync the removal; it does not immediately erase the underlying database record.</p>
+
+<p>Provider logs and backups may remain for a separate period under the provider&#39;s retention practices. Contact us for information about the scope and retention details of your deletion request. No storage or transmission method can guarantee absolute security. We recommend regularly exporting backups of important data.</p>
+
+<h2>7. Your choices and data deletion</h2>
+
+<ul>
+  <li><strong>Export your data:</strong> Export your workspace as a JSON backup or your links as HTML bookmarks.</li>
+  <li><strong>Stop syncing:</strong> Sign out in settings. Signing out does not automatically delete existing local or cloud data.</li>
+  <li><strong>Revoke Google authorization:</strong> Manage access in your <a href="https://myaccount.google.com/connections">Google Account&#39;s third-party connections settings</a>. Revoking access does not delete cloud data previously stored by Tab Organizer.</li>
+  <li><strong>Delete your cloud account and data:</strong> Email <a href="mailto:juliachen.designwork@gmail.com">juliachen.designwork@gmail.com</a> with your sign-in email address and deletion request. We may ask you to verify account ownership. Do not send passwords, session tokens, or API keys.</li>
+  <li><strong>Clear device data:</strong> Clear the extension&#39;s storage or uninstall it. Downloaded backups and local copies on other devices must be handled separately.</li>
+</ul>
+
+<h2>8. Policy updates</h2>
+
+<p>We will update this page and its date when features or data practices change. If a change introduces a new use of Google user data or requires additional authorization, we will provide the necessary explanation and obtain consent as required.</p>
+
+<p><a href="../">Back to Tab Organizer</a> · <a href="../terms/">Terms of Service</a> · <a href="mailto:juliachen.designwork@gmail.com">Contact</a></p>
+
+<section aria-labelledby="website-hosting"><h2 id="website-hosting">Privacy for this website</h2><p>This website is hosted on GitHub Pages. GitHub logs and stores visitors’ IP addresses for security purposes, whether or not a visitor is logged in. These pages add no analytics, cookies, scripts, or external assets. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub Privacy Statement</a> for details.</p></section></main>
+  <footer class="site-footer"><span>Tab Organizer · maintained by Julia</span><span><a href="mailto:juliachen.designwork@gmail.com">Contact</a> · <a href="../privacy/">Privacy</a> · <a href="../terms/">Terms</a></span></footer>
+</body>
+</html>
